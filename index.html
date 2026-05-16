@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Buzz Miami — Professional Beekeeping Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== STICKY NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" onclick="showPage('home');return false;">
+        <div class="logo-hex">🐝</div>
+        <span class="logo-text">Bee <span class="accent">Buzz</span> Miami</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#" class="nav-link" data-page="home"      onclick="showPage('home');return false;">Home</a>
+        <a href="#" class="nav-link" data-page="services"  onclick="showPage('services');return false;">Services</a>
+        <a href="#" class="nav-link" data-page="booking"   onclick="showPage('booking');return false;">Book Now</a>
+        <a href="#" class="nav-link" data-page="learning"  onclick="showPage('learning');return false;">Learn</a>
+        <a href="#" class="nav-link" data-page="about"     onclick="showPage('about');return false;">About Us</a>
+        <a href="#" class="nav-link" data-page="contact"   onclick="showPage('contact');return false;">Contact</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <span class="theme-sun">☀️</span>
+          <span class="theme-moon">🌙</span>
+        </button>
+        <button class="btn-book-nav" onclick="showPage('booking')">Book a Service</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="mainContent">
+
+    <!-- ==================== HOME ==================== -->
+    <section id="page-home" class="page active">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hex-bg"></div>
+        <div class="hero-content">
+          <div class="hero-badge">🐝 Miami's Premier Beekeeping Experts Since 2008</div>
+          <h1 class="hero-title">Nature's Golden <span class="accent">Guardians</span></h1>
+          <p class="hero-sub">Professional beekeeping services, humane hive removal, and locally harvested organic honey — serving Miami and all of South Florida.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="showPage('services')">Our Services</button>
+            <button class="btn-secondary" onclick="showPage('booking')">Book Now</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><span class="stat-n">15+</span><span class="stat-l">Years Experience</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-n">500+</span><span class="stat-l">Hives Managed</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-n">2K+</span><span class="stat-l">Happy Clients</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="honeycomb-display" id="heroHoneycomb"></div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust-strip">
+        <div class="trust-item"><span>🌿</span> Eco-Friendly Methods</div>
+        <div class="trust-item"><span>🛡️</span> Licensed &amp; Insured</div>
+        <div class="trust-item"><span>⚡</span> Same-Day Response</div>
+        <div class="trust-item"><span>🍯</span> Raw Local Honey</div>
+        <div class="trust-item"><span>📍</span> Miami-Dade &amp; Broward</div>
+      </div>
+
+      <!-- Services preview -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">What We Do</span>
+            <h2>Our <span class="accent">Services</span></h2>
+            <p>From humane hive removal to artisanal honey, we offer the full spectrum of professional beekeeping solutions.</p>
+          </div>
+          <div class="services-grid">
+            <div class="svc-card" onclick="showPage('services')">
+              <div class="svc-icon">🏚️</div>
+              <h3>Bee Hive Removal</h3>
+              <p>Safe, humane extraction of unwanted hives from walls, roofs, trees, and more. We remove the entire comb and colony.</p>
+              <span class="card-cta">Learn More →</span>
+            </div>
+            <div class="svc-card" onclick="showPage('services')">
+              <div class="svc-icon">🏡</div>
+              <h3>Bee Hive Relocation</h3>
+              <p>Carefully relocating healthy colonies to our managed apiaries where they continue to pollinate and thrive.</p>
+              <span class="card-cta">Learn More →</span>
+            </div>
+            <div class="svc-card" onclick="showPage('services')">
+              <div class="svc-icon">🌻</div>
+              <h3>Apiary Services</h3>
+              <p>Full apiary management: hive inspections, queen rearing, disease control, and pollination services for farms.</p>
+              <span class="card-cta">Learn More →</span>
+            </div>
+            <div class="svc-card" onclick="showPage('services')">
+              <div class="svc-icon">🍯</div>
+              <h3>Organic Local Honey</h3>
+              <p>Raw, unfiltered Miami wildflower honey harvested sustainably. Available for pickup, delivery, and subscription boxes.</p>
+              <span class="card-cta">Learn More →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Slider -->
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Client Love</span>
+            <h2>What Our Customers <span class="accent">Say</span></h2>
+          </div>
+          <div class="slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Bee Buzz Miami removed a massive hive from our attic in just a few hours. Professional, courteous, and the bees were safely relocated. Incredible service!"</p>
+                <div class="t-author">
+                  <div class="t-avatar">MR</div>
+                  <div><strong>Maria Rodriguez</strong><br><small>Coral Gables, FL</small></div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"We've been buying their wildflower honey for two years. It's the best honey I've ever tasted — completely different from anything in a store. Highly recommend!"</p>
+                <div class="t-author">
+                  <div class="t-avatar">JT</div>
+                  <div><strong>James Thompson</strong><br><small>Brickell, Miami</small></div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"A swarm landed in my backyard on a Saturday morning. Called Bee Buzz Miami and they came within the hour. Friendly team, zero mess, and they even taught me about bees!"</p>
+                <div class="t-author">
+                  <div class="t-avatar">SL</div>
+                  <div><strong>Sofia Larsen</strong><br><small>Coconut Grove, FL</small></div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Their apiary management service has been a game-changer for our community garden. Pollination is up 40% and the honey they harvest on-site is absolutely incredible."</p>
+                <div class="t-author">
+                  <div class="t-avatar">DK</div>
+                  <div><strong>David Kim</strong><br><small>Wynwood, Miami</small></div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Love supporting a local, eco-conscious business. The team is knowledgeable, passionate about bees, and the honey is liquid gold. 10/10 would recommend to anyone!"</p>
+                <div class="t-author">
+                  <div class="t-avatar">AP</div>
+                  <div><strong>Ana Perez</strong><br><small>Little Havana, Miami</small></div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous">&#10094;</button>
+            <button class="slider-btn slider-next" id="sliderNext" aria-label="Next">&#10095;</button>
+            <div class="slider-dots" id="sliderDots"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram Widget -->
+      <section class="section insta-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">@BeeBuzzMiami</span>
+            <h2>Follow Us on <span class="accent">Instagram</span></h2>
+            <p>Daily doses of bees, honey harvests, and South Florida nature.</p>
+          </div>
+          <div class="insta-grid" id="instaGrid"></div>
+          <div class="insta-cta">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-secondary">
+              <i class="fab fa-instagram"></i> Follow @BeeBuzzMiami
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </section><!-- /home -->
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="page-services" class="page">
+
+      <div class="page-hero">
+        <div class="hex-bg"></div>
+        <div class="page-hero-content">
+          <h1>Our <span class="accent">Services</span></h1>
+          <p>Professional, humane, and eco-friendly beekeeping across Miami-Dade and Broward Counties</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="svc-detail">
+          <div class="svc-detail-inner">
+            <div class="svc-detail-icon">🏚️</div>
+            <div class="svc-detail-body">
+              <span class="section-tag">Service 01</span>
+              <h2>Bee Hive <span class="accent">Removal</span></h2>
+              <p>Discovered bees in your walls, attic, or yard? Don't panic — and please don't call an exterminator. Our certified team safely extracts the entire colony and comb structure, leaving your home bee-free and structurally sound.</p>
+              <ul class="svc-features">
+                <li>✅ Complete comb &amp; honey extraction</li>
+                <li>✅ Optional structural repairs</li>
+                <li>✅ Bee-proofing &amp; prevention advice</li>
+                <li>✅ Emergency &amp; same-day service available</li>
+                <li>✅ 30-day return guarantee</li>
+              </ul>
+              <div class="svc-price"><span class="from">Starting from</span><span class="price-big">$199</span></div>
+              <button class="btn-primary" onclick="showPage('booking')">Book Hive Removal →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-detail reverse">
+          <div class="svc-detail-inner">
+            <div class="svc-detail-icon">🏡</div>
+            <div class="svc-detail-body">
+              <span class="section-tag">Service 02</span>
+              <h2>Bee Hive <span class="accent">Relocation</span></h2>
+              <p>For swarms or accessible hives, we offer full relocation — carefully capturing the queen and her colony and transporting them to one of our managed South Florida apiaries where they continue to thrive and pollinate.</p>
+              <ul class="svc-features">
+                <li>✅ Live colony relocation</li>
+                <li>✅ Queen capture guaranteed</li>
+                <li>✅ Swarm collection (often free!)</li>
+                <li>✅ Colony adoption program</li>
+                <li>✅ Certificate of relocation provided</li>
+              </ul>
+              <div class="svc-price"><span class="from">Starting from</span><span class="price-big">$99</span></div>
+              <button class="btn-primary" onclick="showPage('booking')">Book Relocation →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-detail">
+          <div class="svc-detail-inner">
+            <div class="svc-detail-icon">🌻</div>
+            <div class="svc-detail-body">
+              <span class="section-tag">Service 03</span>
+              <h2>Apiary <span class="accent">Services</span></h2>
+              <p>Whether you're a hobbyist beekeeper or a commercial farm, our apiary management keeps your hives healthy and productive. We offer regular inspections, disease treatment, queen rearing, and full management packages.</p>
+              <ul class="svc-features">
+                <li>✅ Monthly hive inspections</li>
+                <li>✅ Varroa mite &amp; disease control</li>
+                <li>✅ Queen rearing &amp; replacement</li>
+                <li>✅ Hive setup for new beekeepers</li>
+                <li>✅ Pollination services for farms &amp; gardens</li>
+                <li>✅ Honey harvest assistance</li>
+              </ul>
+              <div class="svc-price"><span class="from">Starting from</span><span class="price-big">$149<small>/mo</small></span></div>
+              <button class="btn-primary" onclick="showPage('booking')">Book Apiary Service →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-detail reverse">
+          <div class="svc-detail-inner">
+            <div class="svc-detail-icon">🍯</div>
+            <div class="svc-detail-body">
+              <span class="section-tag">Service 04</span>
+              <h2>Organic <span class="accent">Local Honey</span></h2>
+              <p>Our raw, unfiltered Miami wildflower honey is harvested sustainably from our South Florida apiaries. Rich in local pollen, antioxidants, and natural enzymes — this isn't your average supermarket honey.</p>
+              <ul class="svc-features">
+                <li>✅ 100% raw &amp; unfiltered</li>
+                <li>✅ No additives, no heating</li>
+                <li>✅ Miami wildflower &amp; mangrove varieties</li>
+                <li>✅ Gift sets &amp; subscription boxes</li>
+                <li>✅ Bulk orders for restaurants &amp; cafes</li>
+                <li>✅ Local pickup or Miami delivery</li>
+              </ul>
+              <div class="svc-price"><span class="from">From</span><span class="price-big">$14<small>/jar</small></span></div>
+              <button class="btn-primary" onclick="showPage('booking')">Order Honey →</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /services -->
+
+    <!-- ==================== BOOKING ==================== -->
+    <section id="page-booking" class="page">
+
+      <div class="page-hero">
+        <div class="hex-bg"></div>
+        <div class="page-hero-content">
+          <h1>Book a <span class="accent">Service</span></h1>
+          <p>Schedule your appointment online — we confirm within 2 hours during business hours</p>
+        </div>
+      </div>
+
+      <div class="container booking-container">
+
+        <div class="booking-form-wrap">
+          <form class="booking-form" id="bookingForm" onsubmit="handleBooking(event)">
+            <h3>Service Request Form</h3>
+
+            <div class="form-group">
+              <label for="svcType">Service Type *</label>
+              <select id="svcType" name="service" required>
+                <option value="">— Select a Service —</option>
+                <option value="removal">Bee Hive Removal</option>
+                <option value="relocation">Bee Hive Relocation</option>
+                <option value="apiary">Apiary Services</option>
+                <option value="honey">Organic Local Honey Order</option>
+                <option value="emergency">Emergency Swarm Removal</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" name="firstName" placeholder="Maria" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" name="lastName" placeholder="Rodriguez" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" placeholder="maria@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Phone *</label>
+                <input type="tel" name="phone" placeholder="(305) 555-0100" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Service Address *</label>
+              <input type="text" name="address" placeholder="123 Main St, Miami, FL 33133" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred Date *</label>
+                <input type="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label>Preferred Time</label>
+                <select name="time">
+                  <option value="">Any time works</option>
+                  <option value="morning">Morning (8am–12pm)</option>
+                  <option value="afternoon">Afternoon (12pm–4pm)</option>
+                  <option value="evening">Evening (4pm–6pm)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Describe the Situation</label>
+              <textarea name="description" rows="4" placeholder="Tell us about the hive location, approximate size, how long it's been there, and any other details that might help us prepare..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select name="referral">
+                <option value="">— Select —</option>
+                <option value="google">Google Search</option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="neighbor">Neighbor / Word of Mouth</option>
+                <option value="yelp">Yelp</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="terms" name="terms" required>
+              <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit" class="btn-primary btn-full">🐝 Request Appointment</button>
+          </form>
+
+          <div class="booking-success" id="bookingSuccess">
+            <div class="success-icon">🎉</div>
+            <h3>Request Sent!</h3>
+            <p>Thank you! We've received your request and will confirm your appointment within 2 hours during business hours (Mon–Sat, 8am–6pm).</p>
+            <p>Keep an eye on your inbox for a confirmation email.</p>
+            <button class="btn-primary" onclick="resetBooking()">Submit Another Request</button>
+          </div>
+        </div>
+
+        <div class="booking-sidebar">
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <h4>Prefer to Call?</h4>
+            <p><a href="tel:+13055552337"><strong>(305) 555-BEES</strong></a></p>
+            <p>Mon–Sat: 8am – 6pm EST</p>
+          </div>
+          <div class="info-card emergency">
+            <div class="info-icon">⚡</div>
+            <h4>Emergency Service</h4>
+            <p>Swarm on your property right now?</p>
+            <p><a href="tel:+13055554483"><strong>(305) 555-HIVE</strong></a></p>
+            <p><small>24/7 emergency line</small></p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h4>Coverage Area</h4>
+            <ul class="coverage-mini">
+              <li>Miami / Miami Beach</li>
+              <li>Coral Gables / Coconut Grove</li>
+              <li>Hialeah / Doral</li>
+              <li>Kendall / Homestead</li>
+              <li>Fort Lauderdale</li>
+              <li>Hollywood / Pompano Beach</li>
+            </ul>
+          </div>
+          <div class="info-card guarantee-card">
+            <div class="info-icon">🛡️</div>
+            <h4>Our 30-Day Guarantee</h4>
+            <p>All removal services come with a <strong>30-day return guarantee</strong>. If bees return to the same location, we come back at no charge.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /booking -->
+
+    <!-- ==================== LEARNING ==================== -->
+    <section id="page-learning" class="page">
+
+      <div class="page-hero">
+        <div class="hex-bg"></div>
+        <div class="page-hero-content">
+          <h1>Learn About <span class="accent">Bees</span></h1>
+          <p>Discover the fascinating world of honeybees and why they're essential to our ecosystem</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <!-- Bee facts -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">Did You Know?</span>
+            <h2>Fascinating <span class="accent">Bee Facts</span></h2>
+          </div>
+          <div class="facts-grid">
+            <div class="fact-card">
+              <span class="fact-emoji">🌍</span>
+              <h4>One Third of Our Food</h4>
+              <p>Bees pollinate approximately 1 in 3 bites of food we eat, including fruits, vegetables, nuts, and seeds.</p>
+            </div>
+            <div class="fact-card">
+              <span class="fact-emoji">🏃</span>
+              <h4>Amazing Navigators</h4>
+              <p>Honeybees fly up to 15 mph and can navigate as far as 5 miles from their hive, using the sun as a compass.</p>
+            </div>
+            <div class="fact-card">
+              <span class="fact-emoji">💬</span>
+              <h4>The Waggle Dance</h4>
+              <p>Scout bees communicate flower locations through a figure-8 "waggle dance" that encodes precise distance and direction.</p>
+            </div>
+            <div class="fact-card">
+              <span class="fact-emoji">👑</span>
+              <h4>The Queen Bee</h4>
+              <p>A queen can live 3–5 years and lay up to 2,000 eggs per day — more than her own body weight!</p>
+            </div>
+            <div class="fact-card">
+              <span class="fact-emoji">🍯</span>
+              <h4>Honey Never Expires</h4>
+              <p>Archaeologists found 3,000-year-old honey in Egyptian tombs that was still perfectly edible — honey is eternal.</p>
+            </div>
+            <div class="fact-card">
+              <span class="fact-emoji">🌡️</span>
+              <h4>Climate Controlled</h4>
+              <p>Bees keep their hive at exactly 95°F year-round, cooling it by fanning or warming it by clustering — remarkable precision.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Videos -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">Watch &amp; Learn</span>
+            <h2>Educational <span class="accent">Videos</span></h2>
+          </div>
+          <div class="video-grid">
+            <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/nzlsgRSEjp0')">
+              <div class="video-thumb" style="background:linear-gradient(135deg,#e8871a,#f5a623);">
+                <div class="play-btn">▶</div>
+                <div class="video-label">🐝 Life Inside a Beehive</div>
+              </div>
+              <h4>Life Inside a Beehive</h4>
+              <p>An incredible look at the inner workings of a honey bee colony — from egg to adult worker.</p>
+            </div>
+            <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/bFDGPgXtK-U')">
+              <div class="video-thumb" style="background:linear-gradient(135deg,#c8741a,#e8a020);">
+                <div class="play-btn">▶</div>
+                <div class="video-label">🌺 How Bees Make Honey</div>
+              </div>
+              <h4>How Bees Make Honey</h4>
+              <p>From nectar to jar — the fascinating transformation process of raw honey production explained.</p>
+            </div>
+            <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/GyyTLqBpahu')">
+              <div class="video-thumb" style="background:linear-gradient(135deg,#a0600e,#d4881a);">
+                <div class="play-btn">▶</div>
+                <div class="video-label">🚨 Bee Swarm Removal</div>
+              </div>
+              <h4>Safe Bee Removal in Miami</h4>
+              <p>Watch our team safely remove a large colony from a residential property in South Florida.</p>
+            </div>
+            <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/1EkYLfjVbfI')">
+              <div class="video-thumb" style="background:linear-gradient(135deg,#7a4a0a,#b87020);">
+                <div class="play-btn">▶</div>
+                <div class="video-label">🔬 Bee Anatomy Explained</div>
+              </div>
+              <h4>Bee Anatomy 101</h4>
+              <p>A detailed look at bee physiology and how their specialized body parts make honey production possible.</p>
+            </div>
+          </div>
+
+          <div class="video-modal" id="videoModal">
+            <div class="modal-backdrop" onclick="closeVideo()"></div>
+            <div class="modal-content">
+              <button class="modal-close" onclick="closeVideo()" aria-label="Close video">✕</button>
+              <div class="iframe-wrap">
+                <iframe id="videoFrame" frameborder="0" allowfullscreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  title="Educational bee video"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bee species -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">Florida Species Guide</span>
+            <h2>Common Bees in <span class="accent">South Florida</span></h2>
+          </div>
+          <div class="bee-types-grid">
+            <div class="bee-type-card">
+              <span class="bee-type-icon">🐝</span>
+              <h4>European Honey Bee</h4>
+              <em>Apis mellifera</em>
+              <p>The most common managed bee in Florida. Gentle, productive, and excellent pollinators. The gold standard of beekeeping.</p>
+              <span class="bee-tag safe">✅ Generally Docile</span>
+            </div>
+            <div class="bee-type-card">
+              <span class="bee-type-icon">🐝</span>
+              <h4>Africanized Honey Bee</h4>
+              <em>Apis mellifera scutellata</em>
+              <p>Found throughout South Florida. Visually identical to European bees but dramatically more defensive. Require expert handling.</p>
+              <span class="bee-tag caution">⚠️ Approach with Caution</span>
+            </div>
+            <div class="bee-type-card">
+              <span class="bee-type-icon">🐝</span>
+              <h4>Bumblebee</h4>
+              <em>Bombus spp.</em>
+              <p>Round, fuzzy native bees that are critical pollinators. Rarely sting unless directly threatened. Nest in the ground or cavities.</p>
+              <span class="bee-tag safe">✅ Very Docile</span>
+            </div>
+            <div class="bee-type-card">
+              <span class="bee-type-icon">🐝</span>
+              <h4>Carpenter Bee</h4>
+              <em>Xylocopa spp.</em>
+              <p>Large shiny bees that bore into wood to nest. Males are territorial but stingless; females rarely sting. Can damage wood structures.</p>
+              <span class="bee-tag neutral">ℹ️ Mostly Harmless</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">Further Reading</span>
+            <h2>Beekeeping <span class="accent">Resources</span></h2>
+          </div>
+          <div class="resources-grid">
+            <a href="https://www.fdacs.gov" target="_blank" rel="noopener" class="resource-card">
+              <span class="resource-icon">📋</span>
+              <div class="resource-text">
+                <h4>Florida Dept. of Agriculture</h4>
+                <p>Official resources for beekeeping regulations, apiary registration, and state inspections in Florida.</p>
+              </div>
+            </a>
+            <a href="https://www.floridabeekeepers.com" target="_blank" rel="noopener" class="resource-card">
+              <span class="resource-icon">🏛️</span>
+              <div class="resource-text">
+                <h4>Florida State Beekeepers Assoc.</h4>
+                <p>Community, education, and advocacy for Florida beekeepers of all experience levels statewide.</p>
+              </div>
+            </a>
+            <a href="https://edis.ifas.ufl.edu" target="_blank" rel="noopener" class="resource-card">
+              <span class="resource-icon">🎓</span>
+              <div class="resource-text">
+                <h4>UF/IFAS Extension</h4>
+                <p>University of Florida research and educational publications on bee biology, health, and management.</p>
+              </div>
+            </a>
+            <a href="https://honeybeehealthcoalition.org" target="_blank" rel="noopener" class="resource-card">
+              <span class="resource-icon">📚</span>
+              <div class="resource-text">
+                <h4>Honey Bee Health Coalition</h4>
+                <p>Tools and best practices for maintaining healthy colonies and combating honey bee population decline.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="section">
+          <div class="newsletter-box">
+            <span class="newsletter-bee">🐝</span>
+            <h3>Join Our Beekeeper Newsletter</h3>
+            <p>Monthly tips, local bee news, honey harvest updates, and exclusive subscriber discounts.</p>
+            <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+              <input type="email" placeholder="Your email address" required aria-label="Email address">
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+            <div class="newsletter-success" id="newsletterSuccess">🎉 You're subscribed! Welcome to the hive.</div>
+          </div>
+        </section>
+
+      </div>
+    </section><!-- /learning -->
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="page-about" class="page">
+
+      <div class="page-hero">
+        <div class="hex-bg"></div>
+        <div class="page-hero-content">
+          <h1>About <span class="accent">Us</span></h1>
+          <p>Miami's most trusted beekeepers, dedicated to bees, community, and the environment since 2008</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <!-- Story -->
+        <section class="section">
+          <div class="about-grid">
+            <div class="about-image-col">
+              <div class="about-img-placeholder">
+                <span>🐝</span>
+                <p>Est. 2008</p>
+                <small>Miami, Florida</small>
+              </div>
+              <div class="about-badges-row">
+                <span class="about-badge">🏅 Licensed Apiarist</span>
+                <span class="about-badge">♻️ Eco Certified</span>
+                <span class="about-badge">🐝 Bee Guardian</span>
+              </div>
+            </div>
+            <div class="about-text-col">
+              <span class="section-tag">Our Story</span>
+              <h2>From a Backyard Hive to <span class="accent">Miami's Premier Beekeeper</span></h2>
+              <p>It started with a single hive in a Coconut Grove backyard in 2008. Founder Carlos Mendez, a third-generation Cuban-American farmer, inherited his grandfather's passion for bees and natural living. What began as a hobby quickly became a calling.</p>
+              <p>After rescuing a neighbor's backyard swarm and realizing how few humane options existed in Miami, Carlos left his engineering career to dedicate himself fully to bee conservation and education.</p>
+              <p>Today, Bee Buzz Miami manages over 200 hives across South Florida, has relocated more than 1,500 colonies, and produces some of the finest raw honey in the Southeast — all while staying true to our founding mission: <strong>protect the bees, protect the planet.</strong></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">The Team</span>
+            <h2>Meet the <span class="accent">Beekeepers</span></h2>
+          </div>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">CM</div>
+              <h4>Carlos Mendez</h4>
+              <p class="team-role">Founder &amp; Head Beekeeper</p>
+              <p>15+ years experience. Certified Master Beekeeper, UF/IFAS trained. Specializes in Africanized bee management across South Florida.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">LR</div>
+              <h4>Lucia Rivera</h4>
+              <p class="team-role">Apiary Manager</p>
+              <p>Former agricultural scientist with deep expertise in bee health, colony management, queen rearing, and artisanal honey production.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">MS</div>
+              <h4>Marco Santos</h4>
+              <p class="team-role">Removal Specialist</p>
+              <p>Expert in structural bee removal with 8 years of residential and commercial experience across Miami-Dade and Broward.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">JP</div>
+              <h4>Jamie Park</h4>
+              <p class="team-role">Education &amp; Outreach</p>
+              <p>Leads our community workshops, school programs, and social media — spreading bee appreciation across the Miami community.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Values -->
+        <section class="section">
+          <div class="section-header">
+            <span class="section-tag">What Drives Us</span>
+            <h2>Our <span class="accent">Values</span></h2>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <span class="value-icon">🌿</span>
+              <h4>Eco-First</h4>
+              <p>We never use pesticides or destructive methods. Every removal prioritizes the colony's survival and the environment.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">🤝</span>
+              <h4>Community</h4>
+              <p>We offer free educational workshops, donate honey to local food banks, and partner with Miami schools on STEM programs.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">🔬</span>
+              <h4>Science-Backed</h4>
+              <p>All our practices are grounded in the latest apiary research from UF/IFAS, USDA bee labs, and peer-reviewed literature.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-icon">💛</span>
+              <h4>Transparency</h4>
+              <p>Flat-rate pricing, no hidden fees. We explain everything we do and why — no jargon, no surprises, ever.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+          <div class="cta-box">
+            <span class="cta-bee">🐝</span>
+            <h3>Ready to Work With Us?</h3>
+            <p>Whether you need a hive removed, honey delivered, or just want to learn more about bees — we're here for you.</p>
+            <div class="cta-btns">
+              <button class="btn-primary" onclick="showPage('booking')">Book a Service</button>
+              <button class="btn-secondary" onclick="showPage('contact')">Contact Us</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section><!-- /about -->
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="page-contact" class="page">
+
+      <div class="page-hero">
+        <div class="hex-bg"></div>
+        <div class="page-hero-content">
+          <h1>Contact <span class="accent">Us</span></h1>
+          <p>We'd love to hear from you — reach out via any of the channels below</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <!-- Contact info cards -->
+        <div class="contact-cards-row">
+
+          <div class="contact-info-card">
+            <div class="ci-icon">📧</div>
+            <h3>Email</h3>
+            <p>Send us a message any time — we reply to all emails within 24 hours.</p>
+            <div class="ci-detail">
+              <span>General Inquiries</span>
+              <a href="mailto:hello@beebuzzmiami.com">hello@beebuzzmiami.com</a>
+            </div>
+            <div class="ci-detail">
+              <span>Honey Orders</span>
+              <a href="mailto:honey@beebuzzmiami.com">honey@beebuzzmiami.com</a>
+            </div>
+            <div class="ci-detail">
+              <span>Media &amp; Partnerships</span>
+              <a href="mailto:media@beebuzzmiami.com">media@beebuzzmiami.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="ci-icon">📞</div>
+            <h3>Phone</h3>
+            <p>Speak with our team during business hours or use our 24/7 emergency line for urgent situations.</p>
+            <div class="ci-detail">
+              <span>Main Office</span>
+              <a href="tel:+13055552337"><strong>(305) 555-BEES</strong></a>
+            </div>
+            <div class="ci-detail">
+              <span>24/7 Emergency Line</span>
+              <a href="tel:+13055554483"><strong>(305) 555-HIVE</strong></a>
+            </div>
+            <div class="ci-detail">
+              <span>Business Hours</span>
+              <span>Mon–Sat: 8am – 6pm EST</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="ci-icon">📍</div>
+            <h3>Coverage Area</h3>
+            <p>We serve all of Miami-Dade and Broward County. Additional areas may be available — just ask!</p>
+            <div class="coverage-list">
+              <span class="cov-item">✅ Miami / Miami Beach</span>
+              <span class="cov-item">✅ Coral Gables</span>
+              <span class="cov-item">✅ Coconut Grove</span>
+              <span class="cov-item">✅ Brickell / Downtown</span>
+              <span class="cov-item">✅ Hialeah / Doral</span>
+              <span class="cov-item">✅ Kendall / Homestead</span>
+              <span class="cov-item">✅ Fort Lauderdale</span>
+              <span class="cov-item">✅ Pompano Beach</span>
+              <span class="cov-item">✅ Hollywood, FL</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-section">
+          <h3>Send a Message</h3>
+          <form class="contact-form" id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject *</label>
+              <input type="text" placeholder="How can we help?" required>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea rows="6" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message 🐝</button>
+          </form>
+          <div class="contact-success" id="contactSuccess">
+            <div class="success-icon">📬</div>
+            <h4>Message Sent!</h4>
+            <p>Thanks for reaching out! We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder">
+          <span class="map-pin">🗺️</span>
+          <h4>Serving Miami-Dade &amp; Broward County, Florida</h4>
+          <p>Based in Coconut Grove, Miami, FL 33133</p>
+        </div>
+
+      </div>
+    </section><!-- /contact -->
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+
+        <div class="footer-brand">
+          <div class="footer-logo">🐝 Bee <span class="accent">Buzz</span> Miami</div>
+          <p>Miami's most trusted beekeepers since 2008. Humane hive removal, artisanal honey, and full apiary services across South Florida.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-link" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#" onclick="showPage('services');return false;">Bee Hive Removal</a></li>
+            <li><a href="#" onclick="showPage('services');return false;">Bee Hive Relocation</a></li>
+            <li><a href="#" onclick="showPage('services');return false;">Apiary Services</a></li>
+            <li><a href="#" onclick="showPage('services');return false;">Organic Local Honey</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#" onclick="showPage('about');return false;">About Us</a></li>
+            <li><a href="#" onclick="showPage('learning');return false;">Learn About Bees</a></li>
+            <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+            <li><a href="#" onclick="showPage('booking');return false;">Book a Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <ul>
+            <li><a href="tel:+13055552337">📞 (305) 555-BEES</a></li>
+            <li><a href="mailto:hello@beebuzzmiami.com">📧 hello@beebuzzmiami.com</a></li>
+            <li><span>📍 Coconut Grove, Miami, FL</span></li>
+            <li><span>🕐 Mon–Sat: 8am–6pm EST</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <p>© 2025 Bee Buzz Miami LLC. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+        <p>Made with 🍯 in Miami, Florida</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
